@@ -16,7 +16,7 @@ cd "${dir}"
 echo -n "Getting version..."
 
 # get info for the latest version of Tailscale
-tarball="$(curl -s 'https://pkgs.tailscale.com/stable/?mode=json' | jq -r .Tarballs.amd64)"
+tarball="$(curl -s 'https://pkgs.tailscale.com/stable/?mode=json' | jq -r .Tarballs.arm64)"
 version="$(echo ${tarball} | cut -d_ -f2)"
 
 echo "got ${version}."
